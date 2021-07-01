@@ -4,7 +4,6 @@ import { StyleSheet, Text, View, Dimensions,Button } from 'react-native';
 import  Map  from './map'
 import * as Location from 'expo-location'
 import { Marker } from 'react-native-maps';
-import List from '.restroomlist'
 export default class App extends React.Component {
   
  // Data for the class
@@ -38,6 +37,7 @@ export default class App extends React.Component {
     }
     this.getData();
   }
+  
 
   getData() {
     var data = {};
@@ -90,7 +90,6 @@ export default class App extends React.Component {
         <View style={styles.container}>
           <Map location={this.state}></Map>
           {this.renderMarker()}
-          <List data={ this.state}/>
         </View>
         
       );
